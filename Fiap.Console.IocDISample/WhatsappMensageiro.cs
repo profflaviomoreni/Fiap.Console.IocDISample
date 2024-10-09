@@ -1,5 +1,5 @@
 ﻿
- public class WhatsappMensageiro
+ public class WhatsappMensageiro : IMensageiro
  {
 
     public void EnviarMensagem(string mensagem)

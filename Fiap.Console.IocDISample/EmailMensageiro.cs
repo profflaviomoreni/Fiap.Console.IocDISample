@@ -1,10 +1,9 @@
 ﻿
- public class EmailMensageiro
+ public class EmailMensageiro : IMensageiro  
  {
 
-    public void EnviarEmail(string mensagem)
+    public void EnviarMensagem(string msg)
     {
-        Console.WriteLine($"Enviando Email: {mensagem}");
+        Console.WriteLine($"Enviando Email: {msg}");
     }
-
 }

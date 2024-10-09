@@ -1,30 +1,16 @@
 ﻿public class EnviadorMensagem
 {
-    private SmsMensageiro _smsMensageiro;
-    private WhatsappMensageiro _whatsappMensageiro;
-    private EmailMensageiro _emailMensageiro;
 
-    public EnviadorMensagem()
+    private IMensageiro _mensageiro;
+
+    public EnviadorMensagem(IMensageiro mensageiro)
     {
-        // Instanciando as dependências diretamente na classe
-        _smsMensageiro = new SmsMensageiro();
-        _whatsappMensageiro = new WhatsappMensageiro();
-        _emailMensageiro = new EmailMensageiro();
+        _mensageiro = mensageiro;
     }
 
-    public void EnviarSms(string mensagem)
+    public void Enviar(string msg)
     {
-        _smsMensageiro.EnviarMensagem(mensagem);
-    }
-
-    public void EnviarWhatsapp(string mensagem)
-    {
-        _whatsappMensageiro.EnviarMensagem(mensagem);
-    }
-
-    public void EnviarEmail(string mensagem)
-    {
-        _emailMensageiro.EnviarEmail(mensagem);
+        _mensageiro.EnviarMensagem(msg);
     }
 
 }
