@@ -1,22 +1,25 @@
 ﻿
 // Criando o enviador diretamente dentro do código principal
 
-
+// Fabricio
 IMensageiro mensageiroWhats = new WhatsappMensageiro();
 EnviadorMensagem enviador = new EnviadorMensagem(mensageiroWhats);
 enviador.Enviar(" Whats ");
 
 
-
+// Elis 
 EnviadorMensagem env2 = new EnviadorMensagem(new EmailMensageiro());
 env2.Enviar(" Email ");
 
 
-/*
-EnviadorMensagem enviador = new EnviadorMensagem();
-enviador.EnviarSms("Olá, esta é uma mensagem SMS!");
+// Flavio
+EnviadorMensagem env3 = new EnviadorMensagem(new SmsMensageiro());
+env3.Enviar(" SMS ");
 
-enviador.EnviarWhatsapp("Olá, esta é uma mensagem WhatsApp!");
 
-enviador.EnviarEmail("Olá, esta é uma mensagem Email!");
-*/
+
+// Aguinaldo
+EnviadorMensagem env4 = new EnviadorMensagem(new TelegramMensageiro());
+env4.Enviar(" Telegram ");
+
+
